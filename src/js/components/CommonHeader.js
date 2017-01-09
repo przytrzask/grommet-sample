@@ -3,7 +3,7 @@ import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
-import { Link,  } from 'react-router';
+import { Link } from 'react-router';
 
 const CommonHeader = () => {
   return (
@@ -19,15 +19,13 @@ const CommonHeader = () => {
                 closeOnClick={false}
                 size='small'>
                 <Anchor  path="/"
-                      >
+                      >Transakcje
                     
                 </Anchor>
                 <Anchor path="users">
                     Użytkownicy
                 </Anchor>
-                <Anchor tag="Link" path="contractors">
-                    Kontrahenci
-                </Anchor>
+                <Anchor path=""></Anchor>
                 <Anchor path="orders">
                     Zamówienia Kart
                  </Anchor>

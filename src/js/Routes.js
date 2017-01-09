@@ -11,11 +11,11 @@ export default {
   component: Main,
   indexRoute: { component: IndexView },
   childRoutes: [
-       { path: 'users', component: Users },
-        { path: 'contractors', component: Contractors },
-         { path: 'orders', component: Orders },
-       
+    { path: 'users', component: Users },
+    { path: 'contractors', component: Contractors },
+    { path: 'orders', component: Orders },
+
     { path: '*', component: NotFound }
-    
+
   ]
 };

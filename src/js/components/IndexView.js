@@ -6,20 +6,20 @@ import Box from 'grommet/components/Box';
 import TextInput from 'grommet/components/TextInput';
 import Form from 'grommet/components/Form';
 // import FormFields from 'grommet/components/FormFields';
-import Sidebar from 'grommet/components/Sidebar';
 import FormField from 'grommet/components/FormField';
 import NumberInput from 'grommet/components/NumberInput';
 import DateTime from 'grommet/components/DateTime';
-import Split from 'grommet/components/Split';
 import Select from 'grommet/components/Select';
-// import Article from 'grommet/components/Article';
-import CommonHeader from './CommonHeader';
-import Header from 'grommet/components/Header';
 // import Title from  'grommet/components/Title';
 import Button from 'grommet/components/Button';
-import CloseIcon from 'grommet/components/icons/base/Close';
-import Paragraph from 'grommet/components/Paragraph';
 import Layer from 'grommet/components/Layer';
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
+import Search from 'grommet/components/Search';
+import Menu from 'grommet/components/Menu';
+import FilterIcon from 'grommet/components/icons/base/Filter';
+
+
 
 export default class IndexView extends Component {
 
@@ -31,117 +31,142 @@ export default class IndexView extends Component {
   constructor() {
     super();
 
-    this.state = { sidebarActive: true };
+    this.state = { sidebarActive: false };
     this._onClose = this._onClose.bind(this);
+    this._toggleLayer = this._toggleLayer.bind(this);
   }
 
   _onClose() {
     this.setState({ sidebarActive: false });
-    
+
+  }
+
+  _toggleLayer() {
+    this.setState({ sidebarActive: true });
   }
 
   render() {
 
     let layer = this.state.sidebarActive;
-    if (this.state.sidebarActive){ layer = (
-      <Layer align='right' closer={true} onClose={this._onClose} >
-        <Form pad="none">
-          <Box pad="small">
-
-
+    if (this.state.sidebarActive) {
+      layer = (
+        <Layer align='right' closer={true} onClose={this._onClose} >
+          <Form pad="none">
             <Box pad="small">
 
-              <FormField size="large" label="numer karty">
-                <TextInput />
-              </FormField>
-              <FormField label="Od kwoty">
-                <input type="range"></input>
-              </FormField>
-              <FormField label="Do kwoty">
-                <input type="range"></input>
-              </FormField>
 
-              <FormField label="Nr transakcji" >
-                <NumberInput />
-              </FormField>
+              <Box pad="small">
 
-            </Box>
+                <FormField size="large" label="numer karty">
+                  <TextInput />
+                </FormField>
+                <FormField label="Od kwoty">
+                  <input type="range" />
+                </FormField>
+                <FormField label="Do kwoty">
+                  <input type="range" />
+                </FormField>
 
-            <Box pad="small">
+                <FormField label="Nr transakcji" >
+                  <NumberInput />
+                </FormField>
 
-              <FormField label="operacja">
-                <Select placeHolder='Search'
-                  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                  />
-              </FormField>
-              <FormField label="spółka">
-                <Select placeHolder='Search'
-                  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                  />
-              </FormField>
-              <FormField label="sklep">
-                <Select placeHolder='Search'
-                  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                  />
-              </FormField>
-              <FormField label="użytkownik">
-                <Select placeHolder='Search'
-                  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                  />
-              </FormField>
+              </Box>
 
+              <Box pad="small">
 
-
-            </Box>
-            <Box pad="small"
-              >
-
-              <FormField label="Nr transakcji" >
-                <DateTime />
-              </FormField>
-                  <FormField label="Nr transakcji" >
-                <DateTime />
-              </FormField>
-
-            </Box>
-            <Box pad="small"
-              >
+                <FormField label="operacja">
+                  <Select placeHolder='Search'
+                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+                    />
+                </FormField>
+                <FormField label="spółka">
+                  <Select placeHolder='Search'
+                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+                    />
+                </FormField>
+                <FormField label="sklep">
+                  <Select placeHolder='Search'
+                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+                    />
+                </FormField>
+                <FormField label="użytkownik">
+                  <Select placeHolder='Search'
+                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+                    />
+                </FormField>
 
 
-              <FormField label="użytkownik">
-                <Select placeHolder='Search'
-                  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                  />
-              </FormField>
+
+              </Box>
+              <Box pad="small"
+                >
+
+                <FormField label="Nr transakcji" >
+                  <DateTime />
+                </FormField>
+                <FormField label="Nr transakcji" >
+                  <DateTime />
+                </FormField>
+
+              </Box>
+              <Box pad="small"
+                >
 
 
-            </Box>
-            <Box direction="row" justify="center">
-            <Button  label="Resetuj"/>
-            <Button label="Filtruj" />
-            </Box>
+                <FormField label="użytkownik">
+                  <Select placeHolder='Search'
+                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+                    />
+                </FormField>
+
+
+              </Box>
+              <Box direction="row" justify="center">
+                <Button label="Resetuj" />
+                <Button label="Filtruj" />
+              </Box>
 
 
 
 
             </Box>
           </Form>
-          </Layer>)}
+        </Layer>);
+    }
     return (
 
       <Box>
-      
-      Widok -> transakcje 
-                                      {layer}
-
+        <Header fixed={false}
+          float={false}>
+          <Title>
+            Widok -> transakcje
+  </Title>
+          <Box flex={true}
+            justify='end'
+            direction='row'
+            responsive={false}>
+            <Search inline={true}
+              fill={true}
+              size='medium'
+              placeHolder='Wyszukaj'
+              dropAlign={{ "right": "right" }} />
+            <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
 
           </Box>
-
-        
-       
+        </Header>
 
 
-        );
+        {layer}
+
+
+      </Box>
+
+
+
+
+
+    );
   }
 }
 
