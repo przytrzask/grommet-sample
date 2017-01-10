@@ -7,7 +7,7 @@ export default class Main extends Component {
   render () {
     return (
       <App  centered={false}>
-      <Box>
+      <Box full={true}>
          <CommonHeader />
       
         {this.props.children}

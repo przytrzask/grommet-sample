@@ -3,7 +3,8 @@ import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
-import { Link } from 'react-router';
+import NavAnchor from './NavAnchor';
+
 
 const CommonHeader = () => {
   return (
@@ -22,16 +23,16 @@ const CommonHeader = () => {
                       >Transakcje
                     
                 </Anchor>
-                <Anchor path="users">
+                <NavAnchor path="users">
                     Użytkownicy
-                </Anchor>
-                <Anchor path=""></Anchor>
-                <Anchor path="orders">
+                </NavAnchor>
+                <NavAnchor path="contractors">Kontrahenci</NavAnchor>
+                <NavAnchor path="orders">
                     Zamówienia Kart
-                 </Anchor>
-                <Anchor href='#'>
+                 </NavAnchor>
+                <NavAnchor path="cards">
                     Cesje kart
-                 </Anchor>
+                 </NavAnchor>
             </Menu>
             <Menu pad={{ horizontal: 'medium' }} direction='row'
                 // icon={<Actions />}
@@ -40,57 +41,57 @@ const CommonHeader = () => {
                 primary={false}
                 closeOnClick={false}
                 size='small'>
-                <Anchor href='#'
-                    className='active'>
+                <NavAnchor path="rrr"
+                    >
                     Zmień hasło
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Anulowanie transakcji
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Weryfikacja certyfikatu transakcji
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Zmiana daty ważności karty
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Masowa zmiana daty i ważności karty
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Masowa aktywacja kart(sprzedaż B2B)
-  </Anchor>
+  </NavAnchor>
             </Menu>
             <Menu size='small' label="Zestawienia">
-                <Anchor href='#'>
+                <NavAnchor path="/a">
                     Statystyki
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Raporty
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Raporty automatyczne
-  </Anchor>
+  </NavAnchor>
             </Menu>
             <Menu label="Pomoc"
             size='small'>
-                <Anchor href='#'>
+                <NavAnchor path="/a">
                     Licencja
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="status">
                     Statusy transakcji
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Serwis
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Podręcznik kierownika
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Podręcznik kasjera
-  </Anchor>
-                <Anchor href='#'>
+  </NavAnchor>
+                <NavAnchor path="/a">
                     Podręcznik księgowego
-  </Anchor>
+  </NavAnchor>
             </Menu>
         </Header>
 

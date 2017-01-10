@@ -4,7 +4,9 @@
   "main": "src/js/index.js",
   "dependencies": {
     "babel-register": "^6.8.0",
+    "body-parser": "^1.15.2",
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
+    "morgan": "^1.7.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-router": "^3.0.0"

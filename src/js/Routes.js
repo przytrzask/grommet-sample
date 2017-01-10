@@ -4,6 +4,7 @@ import Users from './components/Users';
 import Contractors from './components/Contractors';
 import Orders from './components/Orders';
 import NotFound from './components/NotFound';
+import Status from './components/Status';
 
 
 export default {
@@ -14,6 +15,7 @@ export default {
     { path: 'users', component: Users },
     { path: 'contractors', component: Contractors },
     { path: 'orders', component: Orders },
+    { path: 'status', component: Status },
 
     { path: '*', component: NotFound }
 

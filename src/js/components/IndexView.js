@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component}  from 'react';
 
 // import {browserHistory} from 'react-router';
 import Box from 'grommet/components/Box';
@@ -16,24 +16,33 @@ import Layer from 'grommet/components/Layer';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Search from 'grommet/components/Search';
-import Menu from 'grommet/components/Menu';
+// import Menu from 'grommet/components/Menu';
 import FilterIcon from 'grommet/components/icons/base/Filter';
+import TransactionTable from './TransactionTable';
+// import Anchor from 'grommet/components/Anchor';
+// import NavAnchor from './NavAnchor';
+import { getColumns } from '../store';
 
 
 
 export default class IndexView extends Component {
 
 
-  //  <Form compact={true}>
-  //  </Form>
-  // <Logo colorIndex='light-1' />
 
   constructor() {
     super();
 
-    this.state = { sidebarActive: false };
+    this.state = { 
+      sidebarActive: false,
+      columns: []
+        };
     this._onClose = this._onClose.bind(this);
     this._toggleLayer = this._toggleLayer.bind(this);
+  }
+
+  ComponentDidMount() {
+       getColumns().then((columns) => this.setState({ columns: columns }));
+
   }
 
   _onClose() {
@@ -140,26 +149,27 @@ export default class IndexView extends Component {
         <Header fixed={false}
           float={false}>
           <Title>
-            Widok -> transakcje
+            Transakcje
+            
   </Title>
-          <Box flex={true}
-            justify='end'
-            direction='row'
-            responsive={false}>
+             
             <Search inline={true}
               fill={true}
+              
               size='medium'
               placeHolder='Wyszukaj'
-              dropAlign={{ "right": "right" }} />
+              />
             <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
 
-          </Box>
+          
+         
         </Header>
+        <TransactionTable />
 
 
         {layer}
-
-
+  
+      
       </Box>
 
 
