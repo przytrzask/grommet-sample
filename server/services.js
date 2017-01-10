@@ -12,7 +12,7 @@ app.use(compression());
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 
-const tableHeaders = [{name: "id"},{name: "second"},{name: "second"},{name: "second"}];
+const tableHeaders = [{id: 1,name: "id"},{id: 2,name: "second"},{id: 3,name: "second"},{id: 4,name: "second"}];
 app.get('/api/json/', (req, res) => {
 res.send(tableHeaders);
 });

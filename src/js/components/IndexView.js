@@ -35,13 +35,13 @@ export default class IndexView extends Component {
     this.state = { 
       sidebarActive: false,
       columns: []
-        };
+    };
     this._onClose = this._onClose.bind(this);
     this._toggleLayer = this._toggleLayer.bind(this);
   }
 
   ComponentDidMount() {
-       getColumns().then((columns) => this.setState({ columns: columns }));
+    getColumns().then((columns) => this.setState({ columns: columns }));
 
   }
 
@@ -164,7 +164,7 @@ export default class IndexView extends Component {
           
          
         </Header>
-        <TransactionTable />
+        <TransactionTable columns={this.state.columns} />
 
 
         {layer}
