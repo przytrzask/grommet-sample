@@ -16,12 +16,14 @@ import Layer from 'grommet/components/Layer';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Search from 'grommet/components/Search';
+import Table from 'grommet/components/Table';
 // import Menu from 'grommet/components/Menu';
 import FilterIcon from 'grommet/components/icons/base/Filter';
 import TransactionTable from './TransactionTable';
+import TransactionTableBody from './TransactionsBody';
 // import Anchor from 'grommet/components/Anchor';
 // import NavAnchor from './NavAnchor';
-import { getColumns } from '../store';
+import { getColumns, getRows } from '../store';
 
 
 
@@ -34,20 +36,32 @@ export default class IndexView extends Component {
 
     this.state = { 
       sidebarActive: false,
-      columns: []
+      columns: [],
+      rows:[]
     };
     this._onClose = this._onClose.bind(this);
     this._toggleLayer = this._toggleLayer.bind(this);
   }
 
-  ComponentDidMount() {
-    getColumns().then((columns) => this.setState({ columns: columns }));
+  componentDidMount() {
+    getColumns().then((columns) => 
+    
+    this.setState({ columns: columns }) 
+    
+    );
+
+    getRows().then((rows) => 
+    
+    this.setState({ rows: rows }) 
+    
+    );
+    
 
   }
 
   _onClose() {
     this.setState({ sidebarActive: false });
-
+ 
   }
 
   _toggleLayer() {
@@ -164,8 +178,10 @@ export default class IndexView extends Component {
           
          
         </Header>
-        <TransactionTable columns={this.state.columns} />
-
+        <Table>
+        <TransactionTable  color="brand" columns={this.state.columns} />
+        <TransactionTableBody  color="brand" rows={this.state.rows} />
+        </Table>
 
         {layer}
   

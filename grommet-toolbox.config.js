@@ -17,7 +17,7 @@ export default {
     'grommet': path.resolve(__dirname, '../grommet/src/js')
   },
   devPreprocess: ['set-webpack-alias'],
-  devServerProx: {'/api/json/': 'http://localhost:8000'
+  devServerProxy: {'/api/*': 'http://localhost:8000'
 
   }
 };

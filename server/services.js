@@ -12,9 +12,16 @@ app.use(compression());
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 
-const tableHeaders = [{id: 1,name: "id"},{id: 2,name: "second"},{id: 3,name: "second"},{id: 4,name: "second"}];
-app.get('/api/json/', (req, res) => {
+const tableHeaders = [{id: 1,name: "aaafdgfdga"},{id: 2,name: "bbbb"},{id: 3,name: "bbbb"},{id: 4,name: "bbbb"},{id: 5,name: "bbbb"},{id: 6,name: "bbbb"},{id: 7,name: "bbbb"},{id: 8,name: "bbbb"},{id: 9,name: "bbbb"},{id: 10,name: "bbbb"},{id: 11,name: "bbbb"},{id: 12,name: "bbbb"},{id: 13,name: "bbbb"},{id: 14,name: "bbbb"},{id: 15,name: "bbbb"}];
+
+const tableRows = [{id: 1,name: "aaafdgfdga"},{id: 2,name: "bbbb"},{id: 3,name: "bbbb"},{id: 4,name: "bbbb"},{id: 5,name: "bbbb"},{id: 6,name: "bbbb"},{id: 7,name: "bbbb"},{id: 8,name: "bbbb"},{id: 9,name: "bbbb"},{id: 10,name: "bbbb"},{id: 11,name: "bbbb"},{id: 12,name: "bbbb"},{id: 13,name: "bbbb"},{id: 14,name: "bbbb"},{id: 15,name: "bbbb"}];
+
+app.get('/api/json', (req, res) => {
 res.send(tableHeaders);
+});
+
+app.get('/api/rows', (req, res) => {
+res.send(tableRows);
 });
 
 app.use('/', express.static(path.join(__dirname, '/../dist')));
