@@ -6,8 +6,8 @@ import CommonHeader from './components/CommonHeader';
 export default class Main extends Component {
   render () {
     return (
-      <App  centered={false}>
-      <Box full={true}>
+      <App inline={true} centered={false}>
+      <Box responsive={false} full={true}>
          <CommonHeader />
       
         {this.props.children}

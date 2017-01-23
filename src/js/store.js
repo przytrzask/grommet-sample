@@ -47,6 +47,57 @@ export function getRows() {
     .then(response => response.json())
     .then((result) => {
       if (result) {
+        console.log(result);
+        resolve(result);
+        
+        
+      } else {
+      
+        reject('coś nie tak, spróbuj ponownie');
+        
+        
+      }
+
+    });
+
+
+  });
+
+}
+
+export function getUsersHeaders() {
+  return new Promise((resolve, reject) => {
+    const options = { method: 'GET'};
+    fetch('/api/usersHeaders/', options)
+    .then(response => response.json())
+    .then((result) => {
+      if (result) {
+        console.log(result);
+        resolve(result);
+        
+        
+      } else {
+      
+        reject('coś nie tak, spróbuj ponownie');
+        
+        
+      }
+
+    });
+
+
+  });
+
+}
+
+export function getUsers() {
+  return new Promise((resolve, reject) => {
+    const options = { method: 'GET'};
+    fetch('/api/users/', options)
+    .then(response => response.json())
+    .then((result) => {
+      if (result) {
+        console.log(result);
         resolve(result);
         
         

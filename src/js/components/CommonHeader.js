@@ -48,48 +48,48 @@ const CommonHeader = () => {
                 <NavAnchor path="/a">
                     Anulowanie transakcji
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/b">
                     Weryfikacja certyfikatu transakcji
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/c">
                     Zmiana daty ważności karty
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/d">
                     Masowa zmiana daty i ważności karty
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/e">
                     Masowa aktywacja kart(sprzedaż B2B)
   </NavAnchor>
             </Menu>
             <Menu size='small' label="Zestawienia">
-                <NavAnchor path="/a">
+                <NavAnchor path="/f">
                     Statystyki
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/g">
                     Raporty
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/h">
                     Raporty automatyczne
   </NavAnchor>
             </Menu>
             <Menu label="Pomoc"
             size='small'>
-                <NavAnchor path="/a">
+                <NavAnchor path="/i">
                     Licencja
   </NavAnchor>
                 <NavAnchor path="status">
                     Statusy transakcji
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/j">
                     Serwis
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/k">
                     Podręcznik kierownika
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/l">
                     Podręcznik kasjera
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/m">
                     Podręcznik księgowego
   </NavAnchor>
             </Menu>

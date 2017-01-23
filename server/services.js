@@ -12,9 +12,386 @@ app.use(compression());
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 
-const tableHeaders = [{id: 1,name: "aaafdgfdga"},{id: 2,name: "bbbb"},{id: 3,name: "bbbb"},{id: 4,name: "bbbb"},{id: 5,name: "bbbb"},{id: 6,name: "bbbb"},{id: 7,name: "bbbb"},{id: 8,name: "bbbb"},{id: 9,name: "bbbb"},{id: 10,name: "bbbb"},{id: 11,name: "bbbb"},{id: 12,name: "bbbb"},{id: 13,name: "bbbb"},{id: 14,name: "bbbb"},{id: 15,name: "bbbb"}];
+const tableHeaders = ["numer karty","operacja","kwota","saldo","opcja177","bbdfgbb","bbdfgbb","status","bbdfgbb","bbdfgbb","bbrtbb","bbdfgbb","bbdfgbb","bbdfgd","summary"];
 
-const tableRows = [{id: 1,name: "aaafdgfdga"},{id: 2,name: "bbbb"},{id: 3,name: "bbbb"},{id: 4,name: "bbbb"},{id: 5,name: "bbbb"},{id: 6,name: "bbbb"},{id: 7,name: "bbbb"},{id: 8,name: "bbbb"},{id: 9,name: "bbbb"},{id: 10,name: "bbbb"},{id: 11,name: "bbbb"},{id: 12,name: "bbbb"},{id: 13,name: "bbbb"},{id: 14,name: "bbbb"},{id: 15,name: "bbbb"}];
+
+const tableRows = [  
+      {  
+         "id":"1",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "staus": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"2",
+          "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+         
+         
+      },
+      {  
+         "id":"3",
+          "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+         
+      },
+      {  
+         "id":"4",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"5",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"6",
+        "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"7",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"8",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"9",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"10",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"11",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"12",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"13",
+        "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"14",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "critical",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+      {  
+         "id":"15",
+         "numerkarty": "dsfsdgf",
+         "operacja": "dsfsdgf",
+        "kwota": "dsfsdgf",
+        "saldo": "dsfsdgf",
+        "opcja177": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "status": "ok",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbrtbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgbb": "dsfsdgf",
+        "bbdfgd": "dsfsdgf"
+      },
+   ];
+
+   const usersHeaders = ["sklep", "status", "login", "Data", "Imię", "nawisko","edytuj","zobacz", "dostęp"];
+
+   const users = [  
+      {  
+         "id":"1",
+         "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf",
+        "zoom": true
+       
+      },
+      {  
+         "id":"2",
+          "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+         
+         
+      },
+      {  
+         "id":"3",
+         "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+         
+      },
+      {  
+         "id":"4",
+         "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"5",
+        "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"6",
+        "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"7",
+        "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"8",
+         "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"9",
+       "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+      },
+      {  
+         "id":"10",
+         "sklep": "dsfsdgf",
+         "status": "dsfsdgf",
+        "login": "dsfsdgf",
+        "Data": "dsfsdgf",
+        "imię": "dsfsdgf",
+        "Nazwisko": "dsfsdgf"
+   }];
+
+
+
 
 app.get('/api/json', (req, res) => {
 res.send(tableHeaders);
@@ -22,6 +399,14 @@ res.send(tableHeaders);
 
 app.get('/api/rows', (req, res) => {
 res.send(tableRows);
+});
+
+app.get('/api/usersHeaders', (req, res) => {
+res.send(usersHeaders);
+});
+
+app.get('/api/users', (req, res) => {
+res.send(users);
 });
 
 app.use('/', express.static(path.join(__dirname, '/../dist')));

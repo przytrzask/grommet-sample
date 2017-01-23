@@ -1,6 +1,6 @@
 
 
-import React from 'react' ;
+import React from 'react';
 // import Table from 'grommet/components/Table';
 import TableHeader from 'grommet/components/TableHeader';
 
@@ -26,13 +26,13 @@ import TableHeader from 'grommet/components/TableHeader';
 
 const TransactionTable = (props) => {
   let labels = [];
-  props.columns.map(column => {
-    labels.push(column.name);
-  });
+
+  labels = props.columns;
 
   return (
 
- <TableHeader className="#49516f"  labels={labels} />
+    <TableHeader sortIndex={0}
+      sortAscending={true} labels={labels} />
 
 
   );
@@ -69,8 +69,8 @@ const TransactionTable = (props) => {
 
 // TransactionTable.propTypes = {
 //   columns : PropTypes.array};
-       
-export default TransactionTable;  
+
+export default TransactionTable;
 
 
 

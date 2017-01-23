@@ -1,4 +1,4 @@
-import React, { Component}  from 'react';
+import React, { Component } from 'react';
 
 // import {browserHistory} from 'react-router';
 import Box from 'grommet/components/Box';
@@ -34,34 +34,35 @@ export default class IndexView extends Component {
   constructor() {
     super();
 
-    this.state = { 
+    this.state = {
       sidebarActive: false,
       columns: [],
-      rows:[]
+      rows: []
     };
     this._onClose = this._onClose.bind(this);
     this._toggleLayer = this._toggleLayer.bind(this);
   }
 
   componentDidMount() {
-    getColumns().then((columns) => 
-    
-    this.setState({ columns: columns }) 
-    
+    getColumns().then((columns) =>
+
+      this.setState({ columns: columns })
+
     );
 
-    getRows().then((rows) => 
-    
-    this.setState({ rows: rows }) 
-    
+    getRows().then((rows) =>
+
+      this.setState({ rows: rows })
+
+
     );
-    
+
 
   }
 
   _onClose() {
     this.setState({ sidebarActive: false });
- 
+
   }
 
   _toggleLayer() {
@@ -159,33 +160,35 @@ export default class IndexView extends Component {
     }
     return (
 
-      <Box>
+      <Box responsive={false}
+
+        >
         <Header fixed={false}
           float={false}>
           <Title>
             Transakcje
-            
-  </Title>
-             
-            <Search inline={true}
-              fill={true}
-              
-              size='medium'
-              placeHolder='Wyszukaj'
-              />
-            <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
 
-          
-         
+  </Title>
+
+          <Search inline={true}
+            fill={true}
+
+            size='medium'
+            placeHolder='Wyszukaj'
+            />
+          <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
+
+
+
         </Header>
-        <Table>
-        <TransactionTable  color="brand" columns={this.state.columns} />
-        <TransactionTableBody  color="brand" rows={this.state.rows} />
+        <Table selectable={true}>
+          <TransactionTable color="brand" columns={this.state.columns} />
+          <TransactionTableBody color="brand" rows={this.state.rows} />
         </Table>
 
         {layer}
-  
-      
+
+
       </Box>
 
 

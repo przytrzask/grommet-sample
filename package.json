@@ -5,6 +5,7 @@
   "dependencies": {
     "babel-register": "^6.8.0",
     "body-parser": "^1.15.2",
+    "fixed-data-table": "^0.6.3",
     "grommet": "https://github.com/grommet/grommet/tarball/stable",
     "morgan": "^1.7.0",
     "react": "^15.0.2",
