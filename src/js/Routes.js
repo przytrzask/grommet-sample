@@ -5,6 +5,7 @@ import Contractors from './components/Contractors';
 import Orders from './components/Orders';
 import NotFound from './components/NotFound';
 import Status from './components/Status';
+import EditUser from './components/EditUser';
 
 
 export default {
@@ -16,6 +17,7 @@ export default {
     { path: 'contractors', component: Contractors },
     { path: 'orders', component: Orders },
     { path: 'status', component: Status },
+    { path: 'users/:id', component: EditUser },
 
     { path: '*', component: NotFound }
 

@@ -74,7 +74,7 @@ export default class IndexView extends Component {
     let layer = this.state.sidebarActive;
     if (this.state.sidebarActive) {
       layer = (
-        <Layer align='right' closer={true} onClose={this._onClose} >
+        <Layer  peek={true} align='right' closer={true} onClose={this._onClose} >
           <Form pad="none">
             <Box pad="small">
 

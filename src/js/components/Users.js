@@ -16,6 +16,7 @@ export default class Users extends Component {
 
     this.state = {
       editLayer: false,
+
       usersHeaders: [],
       users: []
 
@@ -23,7 +24,7 @@ export default class Users extends Component {
     };
 
     this._onAccessChange = this._onAccessChange.bind(this);
-    // this._onEdit = this._onEdit.bind(this);
+    this._onEdit = this._onEdit.bind(this);
   }
 
   componentDidMount() {
@@ -48,9 +49,8 @@ export default class Users extends Component {
   }
 
   _onEdit (id) {
-    alert(id);
-    console.log(this);
-    Users.setState({ editLayer: true });
+    
+    this.setState({ editLayer: true });
     // this.setState
   }
 

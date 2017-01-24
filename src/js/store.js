@@ -114,3 +114,29 @@ export function getUsers() {
   });
 
 }
+
+
+export function getContractors() {
+  return new Promise((resolve, reject) => {
+    const options = { method: 'GET'};
+    fetch('/api/contractors/', options)
+    .then(response => response.json())
+    .then((result) => {
+      if (result) {
+        console.log(result);
+        resolve(result);
+        
+        
+      } else {
+      
+        reject('coś nie tak, spróbuj ponownie');
+        
+        
+      }
+
+    });
+
+
+  });
+
+}

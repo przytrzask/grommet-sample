@@ -390,6 +390,51 @@ const tableRows = [
         "Nazwisko": "dsfsdgf"
    }];
 
+   const contractors = [  
+      
+      {  
+        "id": "1",
+         "nazwa":"nazwa",
+          "sklep": "dlosowef",
+         "symbol": "dffgft",
+        "nip": "222444556",
+        "adres": "kołobrzeska 12",
+        "kod_pocztowy": "99-291",
+        "miasto": "Gdańsk",
+        "osoba_kontaktowa": "Tomek",
+        "telefon": "2223333333",
+         
+         
+       },
+       {  
+        "id": "2",
+         "nazwa":"nazwa",
+          "sklep": "dlosowef",
+         "symbol": "dffgft",
+        "nip": "222444556",
+        "adres": "kołobrzeska 12",
+        "kod_pocztowy": "99-291",
+        "miasto": "Gdańsk",
+        "osoba_kontaktowa": "Tomek",
+        "telefon": "2223333333",
+         
+         
+       },
+       {  
+        "id": "3",
+         "nazwa":"nazwa",
+          "sklep": "dlosowef",
+         "symbol": "dffgft",
+        "nip": "222444556",
+        "adres": "kołobrzeska 12",
+        "kod_pocztowy": "99-291",
+        "miasto": "Gdańsk",
+        "osoba_kontaktowa": "Tomek",
+        "telefon": "2223333333",
+         
+         
+       }];
+
 
 
 
@@ -407,6 +452,10 @@ res.send(usersHeaders);
 
 app.get('/api/users', (req, res) => {
 res.send(users);
+});
+
+app.get('/api/contractors', (req, res) => {
+res.send(contractors);
 });
 
 app.use('/', express.static(path.join(__dirname, '/../dist')));

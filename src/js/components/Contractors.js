@@ -1,45 +1,74 @@
 import React, { Component } from 'react';
-// import {browserHistory} from 'react-router';
-import { Table, Column, Cell } from 'fixed-data-table';
-// import Button from 'grommet/components/Button';
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
+import Search from 'grommet/components/Search';
+import Box from 'grommet/components/Box';
+
+import { getContractors } from '../store';
+import ContractorsTable from './ContractorsTable';
 
 
-export default class Contractors extends Component {
+
+export default class Users extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      editLayer: false,
+
+ 
+            
+
+      contractorsHeaders: ['sklep','symbol','nip','adres','kod_pocztowy','miasto','osoba_kontaktowa','telefon'],
+      contractors: []
 
 
+    };
+
+    // this._onAccessChange = this._onAccessChange.bind(this);
+    // this._onEdit = this._onEdit.bind(this);
+  }
+
+  componentDidMount() {
+    
+    getContractors().then((contractors) =>
+
+      this.setState({ contractors: contractors })
+
+
+    );
+
+
+  }
+
+  
 
 
   render() {
-    const rows = [
-      ['a1', 'b1', 'c1'],
-      ['a2', 'b2', 'c2'],
-      ['a3', 'b3', 'c3']
-
-    ];
     return (
-      <Table
-        rowHeight={50}
-        rowsCount={rows.length}
-        width={300}
-        height={300}
-        headerHeight={50}>
-        <Column
-          header={<Cell>Col 1</Cell>}
-          cell={<Cell>Column 1 static content</Cell>}
-          width={2000}
-          />
-        <Column
-          header={<Cell>Col 2</Cell>}
-          cell={<Cell>Column 1 static content</Cell>}
-          width={1000}
-          />
-        <Column
-          header={<Cell>Col 3</Cell>}
-          cell={<Cell>Column 1 static content</Cell>}
+      <Box>
+        <Header fixed={false}
+          float={false}>
+          <Title>
+            Użytkownicy
 
-          width={2000}
-          />
-      </Table>
+  </Title>
+
+          <Search inline={true}
+            fill={false}
+
+            size='medium'
+            placeHolder='Wyszukaj'
+            />
+
+
+
+
+        </Header>
+        <ContractorsTable headers={this.state.contractorsHeaders} contractors={this.state.contractors}  />
+
+      </Box>
 
 
     );

@@ -10,7 +10,7 @@ import AccessAccessibilityIcon from 'grommet/components/icons/base/AccessAccessi
 // import TableHeader from 'grommet/components/TableHeader';
 
 
-const UsersTable = (props) => {
+const ContractorsTable = (props) => {
 
   // <EditIcon onClick={props.edit.bind(this, user.id)} />
 
@@ -25,31 +25,22 @@ const UsersTable = (props) => {
         labels={props.headers} />
       <tbody>
 
-        {props.users.map(user => {
-          let zoom;
-          if (user.zoom) {
-            zoom = <ZoomInIcon onClick={props.access} />;
-
-          }
+        {props.contractors.map(contractor => {
+          
 
 
 
-          return (<TableRow key={user.id}>
-            <td>{user.sklep}</td>
-            <td>{user.status}</td>
-            <td>{user.login}</td>
-            <td>{user.Data}</td>
-            <td>{user.imię}</td>
-            <td>{user.Nazwisko}</td>
-            <td><Anchor icon={<EditIcon />}
-  animateIcon={true}
-  primary={false}
-  reverse={false}
-  disabled={false}
-  path={"users/" + user.id}/></td>
-
-            <td> {zoom}</td>
-            <td><AccessAccessibilityIcon /></td>
+          return (<TableRow key={contractor.id}>
+            <td>{contractor.nazwa}</td>
+            <td>{contractor.sklep}</td>
+            <td>{contractor.symbol}</td>
+            <td>{contractor.nip}</td>
+            <td>{contractor.adres}</td>
+            <td>{contractor.kod_pocztowy}</td>
+            <td>{contractor.miasto}</td>
+            <td>{contractor.osoba_kontaktowa}</td>
+           
+            
 
           </TableRow>);
         })
@@ -66,4 +57,4 @@ const UsersTable = (props) => {
 
 };
 
-export default UsersTable;
+export default ContractorsTable;
