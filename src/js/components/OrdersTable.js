@@ -10,42 +10,34 @@ import StandardsOfflineStorageIcon from 'grommet/components/icons/base/Standards
 // import TableHeader from 'grommet/components/TableHeader';
 
 
-const ContractorsTable = (props) => {
+const OrdersTable = (props) => {
 
   // <EditIcon onClick={props.edit.bind(this, user.id)} />
 
+let labels = props.orders.header;
 
 
-
+console.log(props.orders)
 
 
   return (
     <Table selectable={true}>
       <TableHeader
-        labels={props.headers} />
+labels={labels} />
       <tbody>
 
-        {props.contractors.map(contractor => {
+        {props.orders.data.map(order => {
+          
 
 
 
-
-          return (<TableRow key={contractor.id}>
-            <td>{contractor.nazwa}</td>
-            <td>{contractor.sklep}</td>
-            <td>{contractor.symbol}</td>
-            <td>{contractor.nip}</td>
-            <td>{contractor.adres}</td>
-            <td>{contractor.kod_pocztowy}</td>
-            <td>{contractor.miasto}</td>
-            <td>{contractor.osoba_kontaktowa}</td>
-            <td><Anchor onClick={props.deleteLayer} icon={<StandardsOfflineStorageIcon />} animateIcon={true} /></td>
-            <Tip target='t'
-              onClose={props.deleteLayer}>
-              Available actions
-</Tip>
-
-
+          return (<TableRow key={order.id}>
+            <td>{order.status}</td>
+            
+            
+            
+           
+            
 
           </TableRow>);
         })
@@ -62,4 +54,4 @@ const ContractorsTable = (props) => {
 
 };
 
-export default ContractorsTable;
+export default OrdersTable;

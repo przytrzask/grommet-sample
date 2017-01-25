@@ -140,3 +140,29 @@ export function getContractors() {
   });
 
 }
+
+export function getOrders() {
+  return new Promise((resolve, reject) => {
+    const options = { method: 'GET'};
+    fetch('/api/orders/', options)
+    .then(response => response.json())
+    .then((result) => {
+      if (result) {
+        console.log(result);
+        resolve(result);
+        
+        
+      } else {
+      
+        reject('coś nie tak, spróbuj ponownie');
+        
+        
+      }
+
+    });
+
+
+  });
+
+}
+

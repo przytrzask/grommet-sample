@@ -2,6 +2,7 @@ import React from 'react';
 import TableRow from 'grommet/components/TableRow';
 import Status from 'grommet/components/icons/Status';
 import PrintIcon from 'grommet/components/icons/base/Print';
+import Tip from 'grommet/components/Tip';
 // import Table from 'grommet/components/Table';
 // import TableHeader from 'grommet/components/TableHeader';
 
@@ -38,7 +39,7 @@ const TransactionTableBody = (props) => {
           <td>{row.bbdfgbb}</td>
           <td>{row.bbdfgbb}</td>
           <td>{row.bbdfgbb}</td>
-          <td><PrintIcon /></td>
+          <td ><PrintIcon className="tip" /></td>
 
         </TableRow>);
       })
@@ -47,7 +48,10 @@ const TransactionTableBody = (props) => {
 
 
       }
-
+        <Tip target='tip'
+  onClose={props.deleteLayer}>
+  Available actions
+</Tip>
     </tbody>
 
   );

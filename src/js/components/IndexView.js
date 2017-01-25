@@ -21,6 +21,7 @@ import Table from 'grommet/components/Table';
 import FilterIcon from 'grommet/components/icons/base/Filter';
 import TransactionTable from './TransactionTable';
 import TransactionTableBody from './TransactionsBody';
+
 // import Anchor from 'grommet/components/Anchor';
 // import NavAnchor from './NavAnchor';
 import { getColumns, getRows } from '../store';
@@ -74,7 +75,7 @@ export default class IndexView extends Component {
     let layer = this.state.sidebarActive;
     if (this.state.sidebarActive) {
       layer = (
-        <Layer  peek={true} align='right' closer={true} onClose={this._onClose} >
+        <Layer peek={true} align='right' closer={true} onClose={this._onClose} >
           <Form pad="none">
             <Box pad="small">
 
@@ -187,6 +188,7 @@ export default class IndexView extends Component {
         </Table>
 
         {layer}
+        
 
 
       </Box>
