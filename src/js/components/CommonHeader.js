@@ -17,7 +17,7 @@ const CommonHeader = () => {
             
                 label='Widok'
                 inline={false}
-                closeOnClick={false}
+                closeOnClick={true}
                 size='small'>
                 <Anchor  path="/"
                       >Transakcje
@@ -30,8 +30,8 @@ const CommonHeader = () => {
                 <NavAnchor path="orders">
                     Zamówienia Kart
                  </NavAnchor>
-                <NavAnchor path="cards">
-                    Cesje kart
+                <NavAnchor path="digital">
+                    Zamówienia Elektroniczne
                  </NavAnchor>
             </Menu>
             <Menu pad={{ horizontal: 'medium' }} direction='row'
@@ -62,7 +62,7 @@ const CommonHeader = () => {
   </NavAnchor>
             </Menu>
             <Menu size='small' label="Zestawienia">
-                <NavAnchor path="/f">
+                <NavAnchor path="/stats">
                     Statystyki
   </NavAnchor>
                 <NavAnchor path="/g">

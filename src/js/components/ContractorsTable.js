@@ -40,10 +40,7 @@ const ContractorsTable = (props) => {
             <td>{contractor.miasto}</td>
             <td>{contractor.osoba_kontaktowa}</td>
             <td><Anchor onClick={props.deleteLayer} icon={<StandardsOfflineStorageIcon />} animateIcon={true} /></td>
-            <Tip target='t'
-              onClose={props.deleteLayer}>
-              Available actions
-</Tip>
+           
 
 
 

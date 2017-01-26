@@ -12,7 +12,7 @@ import OrdersTable from './OrdersTable';
 
 
 
-export default class Orders extends Component {
+export default class DigitalOrders extends Component {
 
   constructor(props) {
     super(props);

@@ -182,7 +182,7 @@ export default class IndexView extends Component {
 
 
         </Header>
-        <Table selectable={true}>
+        <Table scrollable={true}  selectable={true}>
           <TransactionTable color="brand" columns={this.state.columns} />
           <TransactionTableBody color="brand" rows={this.state.rows} />
         </Table>

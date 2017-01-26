@@ -13,8 +13,6 @@ import CheckBox from 'grommet/components/CheckBox';
 import Footer from 'grommet/components/Footer';
 import Button from 'grommet/components/Button';
 
-
-
 import { getContractors } from '../store';
 import ContractorsTable from './ContractorsTable';
 
@@ -27,9 +25,9 @@ export default class Users extends Component {
 
     this.state = {
       deleteLayer: false,
-      contractorsHeaders: ['sklep','symbol','nip','adres','kod_pocztowy','miasto','osoba_kontaktowa','telefon',"   "],
+      contractorsHeaders: ['sklep', 'symbol', 'nip', 'adres', 'kod_pocztowy', 'miasto', 'osoba_kontaktowa', 'telefon', "   "],
       contractors: []
-      
+
 
 
     };
@@ -40,7 +38,7 @@ export default class Users extends Component {
   }
 
   componentDidMount() {
-    
+
     getContractors().then((contractors) =>
 
       this.setState({ contractors: contractors })
@@ -51,48 +49,48 @@ export default class Users extends Component {
 
   }
 
-  _onClickDelete(){
+  _onClickDelete() {
 
-    this.setState({deleteLayer: !this.state.deleteLayer})
-    
+    this.setState({ deleteLayer: !this.state.deleteLayer });
+
   }
 
-  
+
 
 
   render() {
     let deleteLayer;
-    if(this.state.deleteLayer) {
+    if (this.state.deleteLayer) {
 
-     deleteLayer =  (<Layer closer={true}
-  onClose={this._onClickDelete}>
-  <Form>
-  <Header>
-    <Heading>
-      Usuwanie Użytkownika
+      deleteLayer = (<Layer closer={true}
+        onClose={this._onClickDelete}>
+        <Form>
+          <Header>
+            <Heading>
+              Usuwanie Użytkownika
     </Heading>
-  </Header>
-  <FormFields>
-    <fieldset>
-      <Paragraph>
-        Użytkownik zostanie usunięty na trwałe
+          </Header>
+          <FormFields>
+            <fieldset>
+              <Paragraph>
+                Użytkownik zostanie usunięty na trwałe
       </Paragraph>
-      <FormField>
-        <CheckBox id='agree'
-          name='agree'
-          label='Potwierdzam usunięcie użytkownika' />
-      </FormField>
-    </fieldset>
-  </FormFields>
-  <Footer pad={{"vertical": "medium"}}>
-    <Button label='Usuń'
-      type='submit'
-      primary={true}
-      />
-  </Footer>
-</Form>
-  
-     </Layer>)
+              <FormField>
+                <CheckBox id='agree'
+                  name='agree'
+                  label='Potwierdzam usunięcie użytkownika' />
+              </FormField>
+            </fieldset>
+          </FormFields>
+          <Footer pad={{ "vertical": "medium" }}>
+            <Button label='Usuń'
+              type='submit'
+              primary={true}
+              />
+          </Footer>
+        </Form>
+
+      </Layer>);
     }
     return (
       <Box>
@@ -114,7 +112,7 @@ export default class Users extends Component {
 
 
         </Header>
-        <ContractorsTable deleteLayer={this._onClickDelete} headers={this.state.contractorsHeaders} contractors={this.state.contractors}  />
+        <ContractorsTable deleteLayer={this._onClickDelete} headers={this.state.contractorsHeaders} contractors={this.state.contractors} />
         {deleteLayer}
       </Box>
 

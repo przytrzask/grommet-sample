@@ -1,9 +1,9 @@
 import React from 'react';
 import TableRow from 'grommet/components/TableRow';
 import Table from 'grommet/components/Table';
-import Anchor from 'grommet/components/Anchor';
+
 import TableHeader from 'grommet/components/TableHeader';
-import StandardsOfflineStorageIcon from 'grommet/components/icons/base/StandardsOfflineStorage';
+
 //import EditIcon from 'grommet/components/icons/base/Edit';
 //import AccessAccessibilityIcon from 'grommet/components/icons/base/AccessAccessibility';
 // import Table from 'grommet/components/Table';
@@ -14,30 +14,35 @@ const OrdersTable = (props) => {
 
   // <EditIcon onClick={props.edit.bind(this, user.id)} />
 
-let labels = props.orders.header;
+  const  labels  = props.headers;
 
 
-console.log(props.orders)
+  
 
 
   return (
     <Table selectable={true}>
       <TableHeader
-labels={labels} />
+        labels={labels} />
       <tbody>
 
-        {props.orders.data.map(order => {
-          
+        {props.orders.map(order => {
+
 
 
 
           return (<TableRow key={order.id}>
+            <td>{order.id}</td>
             <td>{order.status}</td>
-            
-            
-            
+            <td>{order.data_założenia}</td>
+            <td>{order.zlecający}</td>
+            <td>{order.kierunek_logistyczny}</td>
+            <td>{order.nazwa_sklepu}</td>
+
            
-            
+
+
+
 
           </TableRow>);
         })

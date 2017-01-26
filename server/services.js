@@ -438,45 +438,46 @@ const contractors = [
 
 const orders = {
 
-
   headers : ["id", "data założenia", "zlecający", "kierunek logistyczny", "nazwa sklepu", "status"],
-  data : [
+  data: [
 
   {
     "id": "1",
-    "data_założenia": "nazwa",
+    "data": "nazwa",
     "zlecający": "dlosowef",
-    "kierunek logistyczny": "dffgft",
-    "nazwa sklepu": "222444556",
+    "kierunek_logistyczny": "dffgft",
+    "nazwa_sklepu": "222444556",
     "status": "kołobrzeska 12"
   },
   {
     "id": "2",
     "data_założenia": "nazwa",
     "zlecający": "dlosowef",
-    "kierunek logistyczny": "dffgft",
-    "nazwa sklepu": "222444556",
+    "kierunek_logistyczny": "dffgft",
+    "nazwa_sklepu": "222444556",
     "status": "kołobrzeska 12"
   },
   {
     "id": "3",
     "data_założenia": "nazwa",
     "zlecający": "dlosowef",
-    "kierunek logistyczny": "dffgft",
-    "nazwa sklepu": "222444556",
+    "kierunek_logistyczny": "dffgft",
+    "nazwa_sklepu": "222444556",
     "status": "kołobrzeska 12"
   },
   {
     "id": "4",
     "data_założenia": "nazwa",
     "zlecający": "dlosowef",
-    "kierunek logistyczny": "dffgft",
-    "nazwa sklepu": "222444556",
+    "kierunek_logistyczny": "dffgft",
+    "nazwa_sklepu": "222444556",
     "status": "kołobrzeska 12"
   }
 ]};
 
-
+app.get('/api/orders', (req, res) => {
+  res.send(orders);
+});
 
 
 app.get('/api/json', (req, res) => {
@@ -499,9 +500,7 @@ app.get('/api/contractors', (req, res) => {
   res.send(contractors);
 });
 
-app.get('/api/orders', (req, res) => {
-  res.send(orders);
-});
+
 
 app.use('/', express.static(path.join(__dirname, '/../dist')));
 app.get('/*', function (req, res) {
