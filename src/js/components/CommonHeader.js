@@ -15,7 +15,7 @@ const CommonHeader = () => {
         <Menu 
             
             
-                label='Widok'
+                label='WIDOK'
                 inline={false}
                 closeOnClick={true}
                 size='small'>
@@ -36,7 +36,7 @@ const CommonHeader = () => {
             </Menu>
             <Menu pad={{ horizontal: 'medium' }} direction='row'
                 // icon={<Actions />}
-                label='Opcje'
+                label='OPCJE'
                 inline={false}
                 primary={false}
                 closeOnClick={false}
@@ -61,7 +61,7 @@ const CommonHeader = () => {
                     Masowa aktywacja kart(sprzedaż B2B)
   </NavAnchor>
             </Menu>
-            <Menu size='small' label="Zestawienia">
+            <Menu size='small' label="ZESTAWIENIA">
                 <NavAnchor path="/stats">
                     Statystyki
   </NavAnchor>
@@ -72,7 +72,7 @@ const CommonHeader = () => {
                     Raporty automatyczne
   </NavAnchor>
             </Menu>
-            <Menu label="Pomoc"
+            <Menu label="POMOC"
             size='small'>
                 <NavAnchor path="/i">
                     Licencja
