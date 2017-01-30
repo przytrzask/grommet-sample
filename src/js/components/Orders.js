@@ -52,7 +52,7 @@ export default class Orders extends Component {
     console.log(this.state.orders);
 
     return (
-      <Box>
+      <Box  responsive={false} colorIndex="neutral-1">
         <Header fixed={false}
           float={false}>
           <Title>

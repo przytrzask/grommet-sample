@@ -1,6 +1,5 @@
 import React from 'react';
 import Box from 'grommet/components/Box';
-import Paragraph from 'grommet/components/Paragraph';
 import AlertIcon from 'grommet/components/icons/base/Alert';
 import Heading from 'grommet/components/Heading';
 

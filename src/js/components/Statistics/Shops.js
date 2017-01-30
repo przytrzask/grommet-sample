@@ -49,7 +49,7 @@ const Shops = () => {
             </Box>
             
           </Header>
-<Section full={true} align="center" full={true} pad="none">
+<Section full={true} align="center"  pad="none">
           
         
 

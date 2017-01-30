@@ -52,7 +52,7 @@ export default class DigitalOrders extends Component {
     console.log(this.state.orders);
 
     return (
-      <Box responsive={false} color-index="">
+      <Box responsive={false} colorIndex="brand">
         <Header fixed={false}
           float={false}>
           <Title>

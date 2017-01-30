@@ -1,8 +1,7 @@
 
 import React from 'react';
 
-import Chart, {Base, Area, Line, Layers} from 'grommet/components/chart/Chart';
-import Legend from 'grommet/components/Legend';
+
 // import Split from 'grommet/components/Split';
 // import Sidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';

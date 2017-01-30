@@ -49,7 +49,7 @@ const CurrentStock = () => {
             </Box>
             
           </Header>
-<Section full={true} align="center" full="horizontal" pad="none">
+<Section  align="center" full="horizontal" pad="none">
           
         
 

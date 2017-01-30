@@ -58,7 +58,7 @@ export default class Users extends Component {
   render() {
     return (
       <Box responsive={false}
-          colorIndex="neutral-2-a">
+          colorIndex="accent-2-a">
         <Header fixed={false}
           float={false}>
           <Title>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, browserHistory} from 'react-router';
+// import {Router, browserHistory} from 'react-router';
 
 // import {browserHistory} from 'react-router';
 // import Article from 'grommet/components/Article';
@@ -32,57 +32,57 @@ export default class Stats extends Component {
     return (
 
 
-          
-          
-          
-        
-          
-
-<Split priority="left" flex="right">
 
 
- <Sidebar full={true} fixed={true} basis="xxlarge" colorIndex='neutral-1'>
-  <Header pad='medium'
-    justify='between'>
-    <Title>
-      STATYSTYKI
+
+
+
+
+      <Split priority="left" flex="right">
+
+
+        <Sidebar full={true} fixed={true} basis="xxlarge" colorIndex='neutral-1'>
+          <Header pad='medium'
+            justify='between'>
+            <Title>
+              STATYSTYKI
     </Title>
-  </Header>
-  <Box flex='grow'
-    justify='start'>
-    <Menu primary={true}>
-      <NavAnchor path="/stats/current"
-        >
-        Aktualny stok
+          </Header>
+          <Box flex='grow'
+            justify='start'>
+            <Menu primary={true}>
+              <NavAnchor path="/stats/current"
+                >
+                Aktualny stok
       </NavAnchor>
-      <NavAnchor path="/stats/sold">
-        Karty Sprzedane
+              <NavAnchor path="/stats/sold">
+                Karty Sprzedane
       </NavAnchor>
-      <NavAnchor path="/stats/shops">
-        Sklepy
+              <NavAnchor path="/stats/shops">
+                Sklepy
       </NavAnchor>
-      <NavAnchor path="stats/cashiers">
-        Kasjerzy
+              <NavAnchor path="stats/cashiers">
+                Kasjerzy
       </NavAnchor>
-      <NavAnchor path="stats/transactions" >
-        Transakcje
+              <NavAnchor path="stats/transactions" >
+                Transakcje
       </NavAnchor>
-      <Anchor href='#'>
-        Przychody Nadzwyczajne
+              <Anchor href='#'>
+                Przychody Nadzwyczajne
       </Anchor>
-    </Menu>
-  </Box>
-  <Footer pad='medium'>
-    <p>Footer</p>
-  </Footer>
-  </Sidebar>
-  {this.props.children}
-  
+            </Menu>
+          </Box>
+          <Footer pad='medium'>
+            <p>Footer</p>
+          </Footer>
+        </Sidebar>
+        {this.props.children}
 
-</Split>
-      
-      
-     
+
+      </Split>
+
+
+
 
     );
   }
