@@ -41,11 +41,11 @@ const CommonHeader = () => {
                 primary={false}
                 closeOnClick={false}
                 size='small'>
-                <NavAnchor path="rrr"
+                <NavAnchor path="/password"
                     >
                     Zmień hasło
   </NavAnchor>
-                <NavAnchor path="/a">
+                <NavAnchor path="/paf">
                     Anulowanie transakcji
   </NavAnchor>
                 <NavAnchor path="/b">

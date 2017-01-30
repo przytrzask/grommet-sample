@@ -162,7 +162,7 @@ export default class IndexView extends Component {
     return (
 
       <Box responsive={false}
-
+          colorIndex="light-2"
         >
         <Header fixed={false}
           float={false}>

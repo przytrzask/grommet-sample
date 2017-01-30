@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import ChartBox from './ChartBox';
-// import {browserHistory} from 'react-router';
-import Article from 'grommet/components/Article';
+import {Router, browserHistory} from 'react-router';
 
-import Tabs from 'grommet/components/Tabs';
-import Tab from 'grommet/components/Tab';
+// import {browserHistory} from 'react-router';
+// import Article from 'grommet/components/Article';
+
+// import Tabs from 'grommet/components/Tabs';
+// import Tab from 'grommet/components/Tab';
 import Box from 'grommet/components/Box';
 import Sidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
-import Button from 'grommet/components/Button';
+import NavAnchor from './NavAnchor';
 import Footer from 'grommet/components/Footer';
 import Split from 'grommet/components/Split';
 
@@ -26,19 +27,21 @@ export default class Stats extends Component {
 
   render() {
 
-    
+    console.log(this.props);
 
     return (
 
-<Split priority="right" flex="right">
+
           
           
           
         
           
 
-<Sidebar basis="xxlarge" colorIndex='neutral-1'
-  full={false}>
+<Split priority="left" flex="right">
+
+
+ <Sidebar full={true} fixed={true} basis="xxlarge" colorIndex='neutral-1'>
   <Header pad='medium'
     justify='between'>
     <Title>
@@ -48,32 +51,34 @@ export default class Stats extends Component {
   <Box flex='grow'
     justify='start'>
     <Menu primary={true}>
-      <Anchor href='#'
-        className='active'>
+      <NavAnchor path="/stats/current"
+        >
         Aktualny stok
-      </Anchor>
-      <Anchor href='#'>
+      </NavAnchor>
+      <NavAnchor path="/stats/sold">
         Karty Sprzedane
-      </Anchor>
-      <Anchor href='#'>
+      </NavAnchor>
+      <NavAnchor path="/stats/shops">
         Sklepy
-      </Anchor>
-      <Anchor href='#'>
+      </NavAnchor>
+      <NavAnchor path="stats/cashiers">
         Kasjerzy
-      </Anchor>
-      <Anchor href='#'>
+      </NavAnchor>
+      <NavAnchor path="stats/transactions" >
         Transakcje
-      </Anchor>
+      </NavAnchor>
       <Anchor href='#'>
         Przychody Nadzwyczajne
       </Anchor>
     </Menu>
   </Box>
   <Footer pad='medium'>
-    
+    <p>Footer</p>
   </Footer>
-</Sidebar>
-<ChartBox />
+  </Sidebar>
+  {this.props.children}
+  
+
 </Split>
       
       
@@ -106,3 +111,6 @@ export default class Stats extends Component {
 //   </Tab>
 // </Tabs>
 //   </Box>
+
+
+
