@@ -77,6 +77,11 @@ export default class IndexView extends Component {
       layer = (
         <Layer peek={true} align='right' closer={true} onClose={this._onClose} >
           <Form pad="none">
+            <Header>
+            <Title>
+            Filtruj
+            </Title>
+            </Header>
             <Box pad="small">
 
 
@@ -162,7 +167,7 @@ export default class IndexView extends Component {
     return (
 
       <Box responsive={false}
-          colorIndex="light-2"
+        colorIndex="light-2"
         >
         <Header fixed={false}
           float={false}>
@@ -182,13 +187,13 @@ export default class IndexView extends Component {
 
 
         </Header>
-        <Table scrollable={true}  selectable={true}>
+        <Table scrollable={true} selectable={true}>
           <TransactionTable color="brand" columns={this.state.columns} />
           <TransactionTableBody color="brand" rows={this.state.rows} />
         </Table>
 
         {layer}
-        
+
 
 
       </Box>

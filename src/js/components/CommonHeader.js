@@ -14,7 +14,7 @@ const CommonHeader = () => {
         <Title>GiftPlus+</Title>
         <Menu 
             
-            
+            dropAlign={{left: "left", right: "right", top: "bottom"}}
                 label='WIDOK'
                 inline={false}
                 closeOnClick={true}
@@ -45,7 +45,7 @@ const CommonHeader = () => {
                     >
                     Zmień hasło
   </NavAnchor>
-                <NavAnchor path="/paf">
+                <NavAnchor path="/cancelTransaction">
                     Anulowanie transakcji
   </NavAnchor>
                 <NavAnchor path="/b">
@@ -65,7 +65,7 @@ const CommonHeader = () => {
                 <NavAnchor path="/stats">
                     Statystyki
   </NavAnchor>
-                <NavAnchor path="/g">
+                <NavAnchor path="/reports">
                     Raporty
   </NavAnchor>
                 <NavAnchor path="/h">
@@ -77,7 +77,7 @@ const CommonHeader = () => {
                 <NavAnchor path="/i">
                     Licencja
   </NavAnchor>
-                <NavAnchor path="status">
+                <NavAnchor path="transactionstates">
                     Statusy transakcji
   </NavAnchor>
                 <NavAnchor path="/j">

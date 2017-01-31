@@ -11,18 +11,11 @@ export default class Main extends Component {
     return (
 
       <App inline={true} centered={false}>
-        <Box full={true} flex={false}>
+        <Box full={true} flex={false} colorIndex="light-2">
 
           <CommonHeader />
 
           {this.props.children}
-
-
-
-
-
-
-
         </Box>
 
       </App>
@@ -32,13 +25,3 @@ export default class Main extends Component {
 };
 
 
-
-// <Footer alignSelf="end" primary={true}
-//          pad="small" colorIndex="grey-1">
-//           <p>
-//            Najlepsze Aplikacje tylko <Anchor href="ibso.pl" target="_blank">IBSO</Anchor>!
-//           </p>
-//         </Footer>
-
-// <Box responsive={false} full={true}>
-// </Box>
