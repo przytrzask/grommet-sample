@@ -36,10 +36,10 @@ const CurrentStock = () => {
           
           
           
-        <Box colorIndex="light-2">
+        <Box  colorIndex="light-2">
           <Header fill={true} pad={{horizontal: "small", vertical: "medium"}}
             justify="between" size="large" >
-            <Box direction="row" align="center" pad={{between: 'small'}}
+            <Box direction="row" justify="center" align="center" pad={{between: 'small'}}
               responsive={false}>
               <Anchor animateIcon={true} icon={<LinkPreviousIcon />} path="/"
                 a11yTitle="Return" />

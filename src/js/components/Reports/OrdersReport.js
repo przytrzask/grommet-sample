@@ -11,7 +11,7 @@ import Select from 'grommet/components/Select';
 import ListItem from 'grommet/components/ListItem';
 import List from 'grommet/components/List';
 
-import Legend from 'grommet/components/Legend';
+
 // import Split from 'grommet/components/Split';
 // import Sidebar from 'grommet/components/Sidebar';
 
@@ -21,7 +21,7 @@ import Box from 'grommet/components/Box';
 // import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
 // import Layer from 'grommet/components/Layer';
-import Section from 'grommet/components/Section';
+// import Section from 'grommet/components/Section';
 import LinkPreviousIcon from 'grommet/components/icons/base/LinkPrevious';
 import DateTime from 'grommet/components/DateTime';
 
@@ -40,7 +40,7 @@ export default class OrdersReport extends Component {
     super();
 
 
-    this._downloadReport = this._downloadReport.bind(this)
+    this._downloadReport = this._downloadReport.bind(this);
 
   }
 
@@ -129,7 +129,7 @@ export default class OrdersReport extends Component {
 
             </Form>
           </Box>
-          <Box basis="medium" colorIndex="light-2" direction="column"></Box>
+         
 
           <Form>
 

@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-import Legend from 'grommet/components/Legend';
+// import Legend from 'grommet/components/Legend';
 // import Split from 'grommet/components/Split';
 // import Sidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';
@@ -12,7 +12,7 @@ import Box from 'grommet/components/Box';
 // import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
 // import Layer from 'grommet/components/Layer';
-import Section from 'grommet/components/Section';
+// import Section from 'grommet/components/Section';
 import LinkPreviousIcon from 'grommet/components/icons/base/LinkPrevious';
 
 
@@ -49,13 +49,7 @@ const SoldCardsReport = () => {
             </Box>
             
           </Header>
-<Section full={true} align="center" full="horizontal" pad="none">
-          
-        
 
- 
-
-</Section>
 </Box>
 
  

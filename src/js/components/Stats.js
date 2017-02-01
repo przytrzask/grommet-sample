@@ -41,7 +41,7 @@ export default class Stats extends Component {
       <Split priority="left" flex="right">
 
 
-        <Sidebar full={true} fixed={true} basis="xxlarge" colorIndex='neutral-1'>
+        <Sidebar size="small" full={true} fixed={true} colorIndex='neutral-1'>
           <Header pad='medium'
             justify='between'>
             <Title>

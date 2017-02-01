@@ -5,7 +5,7 @@ import Box from 'grommet/components/Box';
 // import Button from 'grommet/components/Button';
 import TextInput from 'grommet/components/TextInput';
 import Form from 'grommet/components/Form';
-// import FormFields from 'grommet/components/FormFields';
+import FormFields from 'grommet/components/FormFields';
 import FormField from 'grommet/components/FormField';
 import NumberInput from 'grommet/components/NumberInput';
 import DateTime from 'grommet/components/DateTime';
@@ -16,11 +16,13 @@ import Layer from 'grommet/components/Layer';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Search from 'grommet/components/Search';
+import Sidebar from 'grommet/components/Sidebar';
 import Table from 'grommet/components/Table';
-// import Menu from 'grommet/components/Menu';
+import Label from 'grommet/components/Label';
 import FilterIcon from 'grommet/components/icons/base/Filter';
 import TransactionTable from './TransactionTable';
 import TransactionTableBody from './TransactionsBody';
+
 
 // import Anchor from 'grommet/components/Anchor';
 // import NavAnchor from './NavAnchor';
@@ -75,94 +77,152 @@ export default class IndexView extends Component {
     let layer = this.state.sidebarActive;
     if (this.state.sidebarActive) {
       layer = (
-        <Layer peek={true} align='right' closer={true} onClose={this._onClose} >
-          <Form pad="none">
+       
+        <Layer flush={true} peek={true} align='left' closer={true} onClose={this._onClose}  >
+        <Sidebar pad="medium" colorIndex='light-2'>
+          
             <Header>
-            <Title>
-            Filtruj
+              <Title>
+                Filtruj
             </Title>
             </Header>
-            <Box pad="small">
+            
+        
 
 
-              <Box pad="small">
+        <Box pad="small" size="medium" 
+          
+          wrap={false}
+          reverse={false}
+          pad='none'
+          margin='none'
+          colorIndex='light-2'
+          >
+          
+          <Box direction='row'
+            justify='between'
+            align='center'
 
-                <FormField size="large" label="numer karty">
-                  <TextInput />
-                </FormField>
-                <FormField label="Od kwoty">
-                  <input type="range" />
-                </FormField>
-                <FormField label="Do kwoty">
-                  <input type="range" />
-                </FormField>
+            pad='none'
+            margin='none'
+            colorIndex='light-2'
+            >
+            <Label size="small">
+              nanannana
+</Label>
+            <FormField size="medium">
+              <NumberInput />
+            </FormField>
+          </Box>
 
-                <FormField label="Nr transakcji" >
-                  <NumberInput />
-                </FormField>
+          <Box direction='row'
+            justify='between'
+            align='center'
 
-              </Box>
+            pad='none'
+            margin='none'
+            colorIndex='light-2' >
+            <Label size="small">
+              nanannana
+</Label>
+            <FormField size="medium">
+             <Select placeHolder='Search'
+              options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+              />
+            </FormField>
+            
+          </Box>
+          <Box direction='row'
+            justify='between'
+            align='center'
 
-              <Box pad="small">
-
-                <FormField label="operacja">
-                  <Select placeHolder='Search'
-                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                    />
-                </FormField>
-                <FormField label="spółka">
-                  <Select placeHolder='Search'
-                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                    />
-                </FormField>
-                <FormField label="sklep">
-                  <Select placeHolder='Search'
-                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                    />
-                </FormField>
-                <FormField label="użytkownik">
-                  <Select placeHolder='Search'
-                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                    />
-                </FormField>
-
-
-
-              </Box>
-              <Box pad="small"
-                >
-
-                <FormField label="Nr transakcji" >
-                  <DateTime />
-                </FormField>
-                <FormField label="Nr transakcji" >
-                  <DateTime />
-                </FormField>
-
-              </Box>
-              <Box pad="small"
-                >
-
-
-                <FormField label="użytkownik">
-                  <Select placeHolder='Search'
-                    options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-                    />
-                </FormField>
+            pad='none'
+            margin='none'
+            colorIndex='light-2' >
+            <Label size="medium" margin="none">
+              Numer Karty
+</Label>
+            <FormField size="medium">
+             <TextInput/>
+            </FormField>
+            
+          </Box>
 
 
-              </Box>
-              <Box direction="row" justify="center">
-                <Button label="Resetuj" />
-                <Button label="Filtruj" />
-              </Box>
+        </Box>
+      
+
+      <Box pad="small" size="medium">
+        
 
 
+        <Box size="medium" 
+          align='between'
+          wrap={false}
+          reverse={false}
+          pad='none'
+          margin='small'
+          colorIndex='light-2'
+          >
+         
+          <Box direction='row'
+            justify='between'
+            align='center'
+
+            pad='none'
+            margin='none'
+            colorIndex='light-2'
+            >
+            <Label size="small">
+              naa
+</Label>
+            <FormField size="small">
+              <NumberInput />
+            </FormField>
+          </Box>
+
+          <Box direction='row'
+            justify='between'
+            align='center'
+
+            pad='none'
+            margin='none'
+            colorIndex='light-2' >
+            <Label size="small">
+              nanannana
+</Label>
+            <FormField size="medium">
+             <Select placeHolder='Wybierz'
+              options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+              />
+            </FormField>
+            
+          </Box>
+          <Box direction='row'
+            justify='between'
+            align='center'
+
+            pad='none'
+            margin='none'
+            colorIndex='light-2' >
+            <Label size="small">
+              nanannana
+</Label>
+            <FormField size="medium">
+             <TextInput/>
+            </FormField>
+            
+          </Box>
 
 
-            </Box>
-          </Form>
-        </Layer>);
+        </Box>
+
+        
+      </Box>
+      
+      </Sidebar>
+        </Layer>
+        );
     }
     return (
 
@@ -171,6 +231,7 @@ export default class IndexView extends Component {
         >
         <Header fixed={false}
           float={false}>
+          <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
           <Title>
             Transakcje
 
@@ -182,7 +243,7 @@ export default class IndexView extends Component {
             size='medium'
             placeHolder='Wyszukaj'
             />
-          <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
+
 
 
 

@@ -13,7 +13,7 @@ const NotFound = () => {
         uppercase={true}
         truncate={false}
         align='start'>
-        Błąd 404
+        Niepoprawny adres strony
 </Heading>
     </Box>
 

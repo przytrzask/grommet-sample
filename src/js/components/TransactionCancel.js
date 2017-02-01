@@ -69,9 +69,7 @@ export default class CancelTransaction extends Component {
             <Button fill={true} type="submit" primary={true} label="Edytuj"
               onClick={this._onSubmit} />
               </Box>
-              <Box pad='medium'>
-           
-              </Box>
+             
           </Footer>
         </Form>
 
@@ -81,8 +79,3 @@ export default class CancelTransaction extends Component {
   }
 }
 
-
-
-
- // <Button type="reset" secondary={true} label="Resetuj"
-            //   onClick={this._onSubmit} />

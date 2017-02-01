@@ -8,7 +8,7 @@ import NavAnchor from './NavAnchor';
 
 const CommonHeader = () => {
   return (
-    <Header direction="row"
+    <Header  direction="row" fixed={true}  splash={false}
         pad="small"
         primary={true} colorIndex="neutral-3-a" >
         <Title>GiftPlus+</Title>

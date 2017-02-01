@@ -11,11 +11,13 @@ export default class Main extends Component {
     return (
 
       <App inline={true} centered={false}>
-        <Box full={true} flex={false} colorIndex="light-2">
+      <CommonHeader />
+        <Box full={true}  flex={false} colorIndex="light-2">
 
-          <CommonHeader />
+          
 
           {this.props.children}
+          
         </Box>
 
       </App>

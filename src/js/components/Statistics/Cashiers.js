@@ -36,10 +36,10 @@ const Cashiers = () => {
           
           
           
-        <Box justify="center" colorIndex="light-2">
+        <Box justify="center" align="center" colorIndex="light-2">
           <Header fill={true} pad={{horizontal: "small", vertical: "medium"}}
             justify="between" size="large" >
-            <Box direction="row" align="center" pad={{between: 'small'}}
+            <Box direction="row" align="center" justify="center" pad={{between: 'small'}}
               responsive={false}>
               <Anchor animateIcon={true} icon={<LinkPreviousIcon />} path="/"
                 a11yTitle="Return" />
