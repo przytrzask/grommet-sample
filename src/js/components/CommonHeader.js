@@ -10,11 +10,11 @@ const CommonHeader = () => {
   return (
     <Header  direction="row" fixed={true}  splash={false}
         pad="small"
-        primary={true} colorIndex="neutral-3-a" >
+        primary={true}  >
         <Title>GiftPlus+</Title>
         <Menu 
             
-            dropAlign={{left: "left", right: "right", top: "bottom"}}
+            dropAlign={{left: "left", right: "left", top: "bottom"}}
                 label='WIDOK'
                 inline={false}
                 closeOnClick={true}

@@ -1,24 +1,41 @@
 import React, { Component } from 'react';
 import App from 'grommet/components/App';
-import Box from 'grommet/components/Box';
+import { connect } from 'react-redux';
+import Article from 'grommet/components/Article';
+import Split from 'grommet/components/Split';
 // import Box from 'grommet/components/Box';
 
 import CommonHeader from './components/CommonHeader';
+import NavSidebar from './components/NavSidebar';
 // import Stats from './components/Stats';
 
-export default class Main extends Component {
+ class Main extends Component {
+
+
+
+  
+
+
   render() {
+
+     const 
+      { sidebarActive }
+     = this.props;
+    let nav = (sidebarActive) ? <NavSidebar />: "";
     return (
 
-      <App inline={true} centered={false}>
-      <CommonHeader />
-        <Box full={true}  flex={false} colorIndex="light-2">
+      <App centered={false}>
+        <Split priority="right" flex='right'
+          onResponsive={this._onResponsive}>
+          {nav}
+          <Article>
+            <CommonHeader />
+            {this.props.children}
+          </Article>
+        </Split>
 
-          
 
-          {this.props.children}
-          
-        </Box>
+
 
       </App>
 
@@ -26,4 +43,9 @@ export default class Main extends Component {
   }
 };
 
-
+const mapStateToProps = (state) => {
+  return { sidebarActive: state.sidebarActive };
+};
+// export default connect(se)(Main);
+// ecport default Main = connect((mapStateToProps)())
+export default Main = connect (mapStateToProps)(Main);

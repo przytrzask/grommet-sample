@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Search from 'grommet/components/Search';
@@ -58,7 +59,8 @@ export default class Users extends Component {
   render() {
     return (
       <Box responsive={false}
-          colorIndex="accent-2-a">
+          >
+        
         <Header fixed={false}
           float={false}>
           <Title>

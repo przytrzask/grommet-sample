@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 import Box from 'grommet/components/Box';
 // import Button from 'grommet/components/Button';
 import TextInput from 'grommet/components/TextInput';
-import Form from 'grommet/components/Form';
-import FormFields from 'grommet/components/FormFields';
+// import Form from 'grommet/components/Form';
+// import FormFields from 'grommet/components/FormFields';
 import FormField from 'grommet/components/FormField';
 import NumberInput from 'grommet/components/NumberInput';
-import DateTime from 'grommet/components/DateTime';
+// import DateTime from 'grommet/components/DateTime';
 import Select from 'grommet/components/Select';
 // import Title from  'grommet/components/Title';
 import Button from 'grommet/components/Button';
@@ -22,6 +22,7 @@ import Label from 'grommet/components/Label';
 import FilterIcon from 'grommet/components/icons/base/Filter';
 import TransactionTable from './TransactionTable';
 import TransactionTableBody from './TransactionsBody';
+
 
 
 // import Anchor from 'grommet/components/Anchor';
@@ -81,7 +82,7 @@ export default class IndexView extends Component {
         <Layer flush={true} peek={true} align='left' closer={true} onClose={this._onClose}  >
         <Sidebar pad="medium" colorIndex='light-2'>
           
-            <Header>
+            <Header >
               <Title>
                 Filtruj
             </Title>
@@ -94,7 +95,7 @@ export default class IndexView extends Component {
           
           wrap={false}
           reverse={false}
-          pad='none'
+         
           margin='none'
           colorIndex='light-2'
           >
@@ -225,24 +226,26 @@ export default class IndexView extends Component {
         );
     }
     return (
-
+      <Box>
+     
       <Box responsive={false}
         colorIndex="light-2"
         >
-        <Header fixed={false}
+        <Header justify='between' pad={{ horizontal: 'medium' }} colorIndex="accent-1-a" fixed={false}
           float={false}>
           <Button onClick={this._toggleLayer} icon={<FilterIcon />} />
-          <Title>
+          <Title truncate={false}>
             Transakcje
 
   </Title>
-
+          <Box direction="row" full="horizontal" pad={{ vertical: 'medium' }} colorIndex="light-2">
           <Search inline={true}
             fill={true}
-
+            
             size='medium'
             placeHolder='Wyszukaj'
             />
+            </Box>
 
 
 
@@ -257,6 +260,7 @@ export default class IndexView extends Component {
 
 
 
+      </Box>
       </Box>
 
 
