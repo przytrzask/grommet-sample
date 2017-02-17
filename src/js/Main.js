@@ -9,19 +9,15 @@ import CommonHeader from './components/CommonHeader';
 import NavSidebar from './components/NavSidebar';
 // import Stats from './components/Stats';
 
- class Main extends Component {
-
-
-
-  
+class Main extends Component {
 
 
   render() {
 
-     const 
+    const
       { sidebarActive }
-     = this.props;
-    let nav = (sidebarActive) ? <NavSidebar />: "";
+        = this.props;
+    let nav = (sidebarActive) ? <NavSidebar /> : "";
     return (
 
       <App centered={false}>
@@ -34,9 +30,6 @@ import NavSidebar from './components/NavSidebar';
           </Article>
         </Split>
 
-
-
-
       </App>
 
     );
@@ -48,4 +41,5 @@ const mapStateToProps = (state) => {
 };
 // export default connect(se)(Main);
 // ecport default Main = connect((mapStateToProps)())
-export default Main = connect (mapStateToProps)(Main);
+export default Main = connect(mapStateToProps)(Main);
+

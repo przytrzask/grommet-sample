@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { navActivate } from '../actions/navActions';
+// import { navActivate } from '../actions/navActions';
 import { connect } from 'react-redux';
 import Button from 'grommet/components/Button';
 import CloseIcon from 'grommet/components/icons/base/Close';
@@ -13,7 +13,7 @@ import Footer from 'grommet/components/Footer';
 
 class NavSidebar extends Component {
 
-   constructor() {
+  constructor() {
     super();
     // this._onClose = this._onClose.bind(this);
   }
@@ -53,11 +53,9 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    _onClose: () => dispatch({ type: 'DEACTIVATE_NAV' }),
-    
-  }
+    _onClose: () => dispatch({ type: 'DEACTIVATE_NAV' })
+
+  };
 };
 
 export default NavSidebar = connect(mapStateToProps, mapDispatchToProps)(NavSidebar);
-
-  

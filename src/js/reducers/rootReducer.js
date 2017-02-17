@@ -1,9 +1,12 @@
-import  { combineReducers } from 'redux';
-import navReducer from './navReducer';
+import { combineReducers } from 'redux';
+import navActiveReducer from './navActiveReducer';
+import navEnabledReducer from './navEnabledReducer';
 
 
 const rootReducer = combineReducers({
-  navReducer
+  navActiveReducer,navEnabledReducer
 });
+
+
 
 export default rootReducer;

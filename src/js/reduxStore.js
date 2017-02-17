@@ -1,10 +1,12 @@
 import { createStore } from 'redux';
-import rootReducer from './reducers/rootReducer'
+import rootReducer from './reducers/rootReducer';
 
+console.log(rootReducer())
+const reduxStore = createStore(rootReducer, {
 
-const reduxStore = createStore(rootReducer, {sidebarActive: false,
-      columns: [],
-rows: []});
-  
+    
+
+})
+
 
 export default reduxStore;
